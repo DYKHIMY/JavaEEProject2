@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.JavaEEProject2.mapper.UserMapper">
+    <resultMap id="userResult" type="com.JavaEEProject2.model.Users">
+        <id column="user_id" property="userId"></id>
+        <result column="user_name" property="userName"></result>
+        <result column="user_password" property="userPassword"></result>
+        <result column="user_type" property="userType"></result>
+    </resultMap>
+    <select id="selectAll" resultMap="userResult">
+        select * from userinfo2
+    </select>
+</mapper>
